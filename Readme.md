@@ -7,19 +7,19 @@
 Lets compare the sentence
 
 ```swift
-    let sentenceBefore = "Swift is a programming language that builds on the best of C and Objective-C, without the constraints of C compatibility."
+let sentenceBefore = "Swift is a programming language that builds on the best of C and Objective-C, without the constraints of C compatibility."
 ```
 
 with
 
 ```swift
-    let sentenceAfter = "Swift is a new programming language for iOS and OS X apps that builds on the best of C and Objective-C."
+let sentenceAfter = "Swift is a new programming language for iOS and OS X apps that builds on the best of C and Objective-C."
 ```
 
 We convert the strings into a list of characters and call the method `simplediff`
 
 ```swift
-    let diffs = simplediff([Character](sentenceBefore), [Character](sentenceAfter))
+let diffs = simplediff([Character](sentenceBefore), [Character](sentenceAfter))
 ```
 
 The diffs looks like this
