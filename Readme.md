@@ -4,25 +4,15 @@
 
 ## Example
 
-Lets compare the sentence
+Lets compare 2 sentences based on the characters
 
 ```swift
-let sentenceBefore = "Swift is a programming language that builds on the best of C and Objective-C, without the constraints of C compatibility."
+let before = "Swift is a programming language that builds on the best of C and Objective-C, without the constraints of C compatibility."
+let after  = "Swift is a new programming language for iOS and OS X apps that builds on the best of C and Objective-C."
+let operations = diff([Character](before), [Character](after))
 ```
 
-with
-
-```swift
-let sentenceAfter = "Swift is a new programming language for iOS and OS X apps that builds on the best of C and Objective-C."
-```
-
-We convert the strings into a list of characters and call the method `simplediff`
-
-```swift
-let operations = diff([Character](sentenceBefore), [Character](sentenceAfter))
-```
-
-The operations printed as strings looks like this
+The diff looks like this
 
     Swift is a[+ new] programming language[+ for iOS and OS X apps] that builds on the best of C and Objective-C[-, without the constraints of C compatibility].
 
