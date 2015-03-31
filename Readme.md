@@ -19,7 +19,7 @@ let sentenceAfter = "Swift is a new programming language for iOS and OS X apps t
 We convert the strings into a list of characters and call the method `simplediff`
 
 ```swift
-let diffs = simplediff([Character](sentenceBefore), [Character](sentenceAfter))
+let diffs = diff([Character](sentenceBefore), [Character](sentenceAfter))
 ```
 
 The diffs looks like this

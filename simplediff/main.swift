@@ -10,7 +10,7 @@ import Foundation
 
 let before = [Character]("Swift is a programming language that builds on the best of C and Objective-C, without the constraints of C compatibility.")
 let after = [Character]("Swift is a new programming language for iOS and OS X apps that builds on the best of C and Objective-C.")
-let result = simplediff(before, after)
+let result = diff(before, after)
 for r in result {
     print(r.description)
 }
