@@ -1,6 +1,6 @@
 # Readme
 
-**simplediff** is an implementation of the [simplediff](https://github.com/paulgb/simplediff) algorithm in Swift. It finds the difference between two lists which can be a list of characters, words or any other objects.
+**simplediff** is a generic implementation of the [simplediff](https://github.com/paulgb/simplediff) algorithm in Swift. It finds the difference between two lists which can be a list of characters, words or any other objects.
 
 ## Example
 
