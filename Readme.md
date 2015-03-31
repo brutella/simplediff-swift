@@ -25,3 +25,16 @@ let diffs = simplediff([Character](sentenceBefore), [Character](sentenceAfter))
 The diffs looks like this
 
     Swift is a[+ new] programming language[+ for iOS and OS X apps] that builds on the best of C and Objective-C[-, without the constraints of C compatibility].
+
+# Contact
+
+Matthias Hochgatterer
+
+Github: [https://github.com/brutella/](https://github.com/brutella/)
+
+Twitter: [https://twitter.com/brutella](https://twitter.com/brutella)
+
+
+# License
+
+simplediff-swift is available under the MIT license. See the LICENSE file for more info.
