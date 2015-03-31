@@ -10,8 +10,8 @@ import Cocoa
 import XCTest
 
 class Tests: XCTestCase {
-    func testCharacterDiff() {
-        let result = diff([Character]("Matthias"), [Character]("Matthew"))
+    func testCharactersimplediff() {
+        let result = simplediff([Character]("Matthias"), [Character]("Matthew"))
         XCTAssertEqual(result.count, 3)
         XCTAssertEqual(result[0].type, .Noop)
         XCTAssertEqual(result[0].elements, [Character]("Matth"))
@@ -21,10 +21,10 @@ class Tests: XCTestCase {
         XCTAssertEqual(result[2].elements, [Character]("ew"))
     }
     
-    func testWordsDiff() {
+    func testWordssimplediff() {
         let before = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.".componentsSeparatedByString(" ")
         let after = "Lorem ipsum dolor amet, consectetur sit amet elit.".componentsSeparatedByString(" ")
-        let result = diff(before, after)
+        let result = simplediff(before, after)
         XCTAssertEqual(result.count, 6)
         XCTAssertEqual(result[0].type, .Noop)
         XCTAssertEqual(result[0].elements, "Lorem ipsum dolor".componentsSeparatedByString(" "))
@@ -41,7 +41,7 @@ class Tests: XCTestCase {
     }
     
     func testNumbers() {
-        let result = diff([1, 4, 10], [1, 2, 3, 4, 5])
+        let result = simplediff([1, 4, 10], [1, 2, 3, 4, 5])
         XCTAssertEqual(result.count, 5)
         XCTAssertEqual(result[0].type, .Noop)
         XCTAssertEqual(result[0].elements, [1])

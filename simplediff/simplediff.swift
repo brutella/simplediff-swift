@@ -51,7 +51,7 @@ struct Operation<T> {
 /// :param: before Old list of elements.
 /// :param: after New list of elements
 /// :returns: A list of operation (insert, delete, noop) to transform the list *before* to the list *after*.
-func diff<T where T: Equatable, T: Hashable>(before: [T], after: [T]) -> [Operation<T>] {
+func simplediff<T where T: Equatable, T: Hashable>(before: [T], after: [T]) -> [Operation<T>] {
     // Create map of indices for every element
     var beforeIndices = [T: [Int]]()
     for (index, elem) in enumerate(before) {
@@ -96,11 +96,11 @@ func diff<T where T: Equatable, T: Hashable>(before: [T], after: [T]) -> [Operat
         }
     } else {
         // Recursive call with elements before overlay
-        operations += diff(Array(before[0..<beforeStart]), Array(after[0..<afterStart]))
+        operations += simplediff(Array(before[0..<beforeStart]), Array(after[0..<afterStart]))
         // Noop for longest overlay
         operations.append(Operation(type: .Noop, elements: Array(after[afterStart..<afterStart+maxOverlayLength])))
         // Recursive call with elements after overlay
-        operations += diff(Array(before[beforeStart+maxOverlayLength..<before.count]), Array(after[afterStart+maxOverlayLength..<after.count]))
+        operations += simplediff(Array(before[beforeStart+maxOverlayLength..<before.count]), Array(after[afterStart+maxOverlayLength..<after.count]))
     }
     return operations
 }
