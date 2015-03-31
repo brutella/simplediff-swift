@@ -19,10 +19,10 @@ let sentenceAfter = "Swift is a new programming language for iOS and OS X apps t
 We convert the strings into a list of characters and call the method `simplediff`
 
 ```swift
-let diffs = diff([Character](sentenceBefore), [Character](sentenceAfter))
+let operations = diff([Character](sentenceBefore), [Character](sentenceAfter))
 ```
 
-The diffs looks like this
+The operations printed as strings looks like this
 
     Swift is a[+ new] programming language[+ for iOS and OS X apps] that builds on the best of C and Objective-C[-, without the constraints of C compatibility].
 
