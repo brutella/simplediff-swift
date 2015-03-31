@@ -1,6 +1,6 @@
 # Readme
 
-**simplediff** is an implementation of the [simplediff](https://github.com/paulgb/simplediff) in Swift. It finds the difference between two lists which can be a list of characters, words or any other objects.
+**simplediff** is an implementation of the [simplediff](https://github.com/paulgb/simplediff) algorithm in Swift. It finds the difference between two lists which can be a list of characters, words or any other objects.
 
 ## Example
 
@@ -25,6 +25,11 @@ let operations = diff([Character](sentenceBefore), [Character](sentenceAfter))
 The operations printed as strings looks like this
 
     Swift is a[+ new] programming language[+ for iOS and OS X apps] that builds on the best of C and Objective-C[-, without the constraints of C compatibility].
+
+## Use Cases
+
+This library makes it easy to calculate diffs of `UITableView` or `UIColletionView` data source and to animate insertions and deletions.
+
 
 # Contact
 
