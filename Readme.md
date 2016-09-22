@@ -7,9 +7,10 @@
 Lets compare 2 sentences based on the characters
 
 ```swift
-let before = "Swift is a programming language that builds on the best of C and Objective-C, without the constraints of C compatibility."
-let after  = "Swift is a new programming language for iOS and OS X apps that builds on the best of C and Objective-C."
-let operations = diff([Character](before), [Character](after))
+let toCharacters: ((String) -> [String]) = { $0.characters.map({ "\($0)" }) }
+let before = toCharacters("Swift is a programming language that builds on the best of C and Objective-C, without the constraints of C compatibility.")
+let after = toCharacters("Swift is a new programming language for iOS and OS X apps that builds on the best of C and Objective-C.")
+let changes = simplediff(before: before, after: after)
 ```
 
 The diff looks like this
